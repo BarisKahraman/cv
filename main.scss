@@ -1,0 +1,451 @@
+$colors: (
+    primary: #005DFF,
+    primary-light: lighten(#005DFF, 40%),
+    primary-dark: darken(#005DFF, 40%),
+    accent: #FFF6BB
+);
+
+
+
+$padding: 15px; 
+$borders: 15px;
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+$desktop2: 450px;
+
+$desktopheight: 720px;
+
+$desktopheight2: 600px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop2 {
+    @media (min-width: #{$desktop2}) {
+        @content;
+    }
+}
+
+@mixin desktopheight {
+    @media (min-height: #{$desktopheight}) {
+        @content;
+    }
+}
+
+@mixin desktopheight2 {
+    @media (min-height: #{$desktopheight2}) {
+        @content;
+    }
+}
+
+@font-face{
+    src: url(Berlin.ttf);
+    font-family: nos;
+}
+
+@font-face{
+    src: url(Poppins.ttf);
+    font-family: nos2;
+}
+
+
+body, html {
+    height: 100%;
+}
+
+p#welcome{
+    text-align: left;
+    font-size:25px;
+    color: white;
+    margin-top: 250px;
+    text-shadow: 0px 3px 10px #000000;
+    @include desktop {
+        font-size:50px;
+    }
+}
+
+p#welcome2{
+    text-align: right;
+    color: white;
+    font-family: nos;
+    font-size: 40px;
+    margin-top: 250px;
+    text-shadow: 0px 3px 10px #000000;
+    @include desktop {
+        font-size:80px;
+    }
+}
+
+#container2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  #container3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    margin: 0 0 0 -120px;
+    @include desktop {
+        left: 50%;
+        top: 50%;
+        margin: -75px 0 0 -250px; /* apply negative top and left margins to truly center the element */
+    }
+
+  }
+
+  #leftThing {
+    width: 43%;
+    
+  }
+  #rightThing {
+    width: 57%;
+  }
+
+h2#iletisim{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    @include desktopheight {
+        margin-top: 65px;
+        margin-bottom: 80px;
+    }
+}
+
+
+.left img{
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    height: 200px;
+
+    @include desktop {
+        height: 500px;
+    }
+}
+
+
+.container {
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+
+  .reduce4 img{
+    position: absolute;
+    bottom: 0px;
+    height: 160px;
+    @include desktop {
+    height: 400px;
+    }
+
+   
+}
+
+.velkam img{
+    height: 80px;
+    @include desktop {
+    height: 155px;
+    }
+}
+
+.reduce2 img{
+    position: absolute;
+    bottom: 0px;
+    height: 180px;
+    @include desktopheight {
+     height: 250px;
+    }
+
+    @include desktop {
+    height: 400px;
+    }
+}
+
+
+
+.s1 {
+    background: url('images/background.png');
+    background-size: cover;
+}
+
+.s2 {
+    background: url('images/background.png');
+    background-size: cover;
+
+}
+
+.s3 {
+    background: url('images/yol.png');
+    background-size: cover;
+   
+}
+
+.s4 {
+    background: url('images/background.png');
+    background-size: cover;
+   
+}
+
+.s5 {
+    background: url('images/background.png');
+    background-size: cover;
+    h1{
+        text-align: left;
+        margin-left: 2em;
+        font-size: 2em;
+    }
+}
+
+
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: yellow;
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 2px;
+}
+
+
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color:#F8FB66;
+    font-size: 12px;
+    font-family: nos2;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    text-shadow: 0px 2px 5px #000000;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+
+main {
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: 
+            "primary card";
+    }
+
+  
+
+
+    li#leaf {
+        background: url('job.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+
+
+    li#leaf2 {
+        background: url('software.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+
+
+    li#leaf3 {
+        background: url('ai.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+
+
+    li#leaf4 {
+        background: url('digital.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+
+
+    li#leaf5 {
+        background: url('ux.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+
+    li#leaf6 {
+        background: url('web.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+
+    li#leaf7 {
+        background: url('mail.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+
+
+    li#leaf8 {
+        background: url('phone.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+    li#leaf9 {
+        background: url('local.png') no-repeat left top;
+        height: 55px;
+        padding-left: 40px;
+        background-size: 30px;
+        padding-top: -3px;
+        margin-top: -25px;
+        }
+            
+
+    li#local {
+        background: url('local.png') no-repeat left top;
+        height: 55px;
+        padding-left: 80px;
+        padding-top: 3px;
+        }
+
+    li#web {
+        background: url('web.png') no-repeat left top;
+        height: 55px;
+        padding-left: 80px;
+        padding-top: 3px;
+        }
+
+    ul#nodot{
+        list-style-type: none;
+    }
+
+    section#list{
+            margin-left: 10px;
+            margin-top: -70px;
+        @include desktop2 {
+            margin-top: -120px;
+            margin-left: 10px;
+        }
+        @include desktop{
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+    }
+
+    section#list2{
+        margin-left: 5px;
+        margin-top: -250px;
+        @include desktop {
+            margin-top: -100px;
+            margin-left: 90px;
+        }
+    }
+
+    section#product{
+        margin-top: -100px;
+        margin-left: 0px;
+        @include desktopheight {
+            margin-top: -200px;
+            margin-left: 0px;
+        }
+        @include desktop2 {
+            margin-top: -135px;
+            margin-left: 0px;
+        }
+        @include desktop {
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+    }
+
+    div#center{
+        line-height: 30px;
+        text-decoration-line: underline;
+        text-decoration-color: white;
+    }
+
+    div#center2{
+        line-height: 20px;
+        text-decoration-line: underline;
+        text-decoration-color: white;
+    }
+
+
+    div#small{
+        line-height: 15px;
+    }
+
+    div#logo{
+        padding-left: 30px;
+    }
+
+    b#align{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        justify-content: center;
+        text-shadow: 0px 3px 10px #000000;
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+
+  
+}
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    
+    #bg {
+        background: url('background.png');
+        background-color: color(primary);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    header a {
+        color: #fff;
+        text-decoration: none;
+        padding: $padding;
+        display: block;
+        text-transform: uppercase;
+    }
+}
